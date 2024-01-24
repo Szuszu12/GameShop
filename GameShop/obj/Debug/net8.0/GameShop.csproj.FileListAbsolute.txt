@@ -137,3 +137,4 @@ C:\Users\szymo\source\repos\GameShop\GameShop\obj\Debug\net8.0\ref\GameShop.dll
 C:\Users\szymo\source\repos\GameShop\GameShop\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\szymo\source\repos\GameShop\GameShop\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\szymo\source\repos\GameShop\GameShop\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\szymo\source\repos\GameShop\GameShop\obj\Debug\net8.0\GameShop.sourcelink.json

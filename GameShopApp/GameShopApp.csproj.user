@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="MainWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Client\AddClientWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -40,9 +43,6 @@
     <Compile Update="Views\Game\GameWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\MainWindow\MainWindow.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Views\Order\OrderWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -51,6 +51,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\Client\AddClientWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -82,9 +85,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Game\GameWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Views\MainWindow\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Order\OrderWindow.xaml">

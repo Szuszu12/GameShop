@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\szymo\source\repos\GameShop\GameShopApp\App.xaml
-14964317070
+14-311775412
 
-21344439494
+21-1152409243
 1991378854379
-Views\Category\CategoryWindow.xaml;Views\Client\AddClientWindow.xaml;Views\Client\ClientWindow.xaml;Views\Client\EditClientWindow.xaml;Views\Game\AddGameWindow.xaml;Views\Game\EditGameWindow.xaml;Views\Game\GameWindow.xaml;Views\MainWindow\MainWindow.xaml;Views\Order\AddOrderWindow.xaml;Views\Order\EditOrderWindow.xaml;Views\Order\OrderWindow.xaml;Views\Producer\AddProducerWindow.xaml;Views\Producer\EditProducerWindow.xaml;Views\Producer\ProducerWindow.xaml;
+MainWindow.xaml;Views\Category\CategoryWindow.xaml;Views\Client\AddClientWindow.xaml;Views\Client\ClientWindow.xaml;Views\Client\EditClientWindow.xaml;Views\Game\AddGameWindow.xaml;Views\Game\EditGameWindow.xaml;Views\Game\GameWindow.xaml;Views\Order\AddOrderWindow.xaml;Views\Order\EditOrderWindow.xaml;Views\Order\OrderWindow.xaml;Views\Producer\AddProducerWindow.xaml;Views\Producer\EditProducerWindow.xaml;Views\Producer\ProducerWindow.xaml;
 
-False
+True
 

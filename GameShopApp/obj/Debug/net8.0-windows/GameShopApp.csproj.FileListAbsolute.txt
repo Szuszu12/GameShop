@@ -19,8 +19,6 @@ C:\Users\szymo\source\repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\refint
 C:\Users\szymo\source\repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\GameShopApp.pdb
 C:\Users\szymo\source\repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\GameShopApp.genruntimeconfig.cache
 C:\Users\szymo\source\repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\ref\GameShopApp.dll
-C:\Users\szymo\source\repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\MainWindow.g.cs
-C:\Users\szymo\source\repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\MainWindow.baml
 C:\Users\szymo\source\repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\Views\Category\CategoryWindow.g.cs
 C:\Users\szymo\source\repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\Views\Client\AddClientWindow.g.cs
 C:\Users\szymo\source\repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\Views\Client\ClientWindow.g.cs
@@ -47,3 +45,6 @@ C:\Users\szymo\source\repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\Views\
 C:\Users\szymo\source\repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\Views\Producer\AddProducerWindow.baml
 C:\Users\szymo\source\repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\Views\Producer\EditProducerWindow.baml
 C:\Users\szymo\source\repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\Views\Producer\ProducerWindow.baml
+C:\Users\szymo\source\repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\GameShopApp.sourcelink.json
+C:\Users\szymo\source\repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\szymo\source\repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\MainWindow.baml

@@ -37,7 +37,7 @@ namespace GameShopApp
             OpenCategoryWindow();
         }
 
-        private void OpenClientWindow() 
+        private void OpenClientWindow()
         {
             ClientWindow clientWindow = new ClientWindow();
             clientWindow.Owner = this;
