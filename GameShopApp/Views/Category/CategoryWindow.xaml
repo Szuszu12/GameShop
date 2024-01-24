@@ -30,14 +30,6 @@
         </ListBox>
 
         <StackPanel Grid.Column="1" Margin="10">
-            <TextBox x:Name="categoryNameTextBox" 
-                     Width="200" 
-                     Height="30" 
-                     Margin="0,0,0,10" 
-                     Text="Wprowadź nazwę kategorii" 
-                     BorderBrush="DarkGray" 
-                     BorderThickness="1" 
-                     Padding="5"/>
 
             <Button Content="Dodaj nową kategorię" 
                     Background="#4CAF50" 

@@ -48,3 +48,7 @@ C:\Users\szymo\source\repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\Views\
 C:\Users\szymo\source\repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\GameShopApp.sourcelink.json
 C:\Users\szymo\source\repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\szymo\source\repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\szymo\source\repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\Views\Category\EditCategoryWindow.g.cs
+C:\Users\szymo\source\repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\Views\Category\EditCategoryWindow.baml
+C:\Users\szymo\source\repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\Views\Category\AddCategoryWindow.g.cs
+C:\Users\szymo\source\repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\Views\Category\AddCategoryWindow.baml

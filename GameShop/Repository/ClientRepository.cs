@@ -36,21 +36,10 @@ namespace GameShop.Repository
         {
             return _context.Clients.Where(c => c.Id == id).FirstOrDefault();
         }
-
-        //public Client GetClientOrder(int orderId)
-        //{
-        //    return _context.Orders.Where(o => o.Id == orderId).Select(c => c.Client).FirstOrDefault();
-        //}
-
         public ICollection<Client> GetClients()
         {
             return _context.Clients.ToList();
         }
-
-        //public ICollection<Order> GetOrdersFromClients(int clientId)
-        //{
-        //    return _context.Orders.Where(c => c.Client.Id == clientId).ToList();
-        //}
 
         public bool Save()
         {

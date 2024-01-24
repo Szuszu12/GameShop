@@ -1,4 +1,5 @@
 ﻿using GameShopApiClient;
+using GameShopApp.Views.Category;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -14,10 +15,13 @@ namespace GameShopApp
         private const string ApiBaseUrl = "https://localhost:7183/api/Category";
         private readonly HttpClient httpClient;
 
+        public CategoryDto SelectedCategory { get; set; }
+
         public CategoryWindow()
         {
             InitializeComponent();
             httpClient = new HttpClient();
+            DataContext = this;
         }
 
         private async void Window_Loaded(object sender, RoutedEventArgs e)
@@ -37,31 +41,17 @@ namespace GameShopApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Wystąpił błąd podczas pobierania kategorii: {ex.Message}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Podczas ładowania kategorii pojawił się błąd: {ex.Message}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
         private async void AddCategoryButton_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                CategoryDto newCategory = new CategoryDto
-                {
-                    CategoryName = categoryNameTextBox.Text.Trim()
-                };
+            AddCategoryWindow addCategoryWindow = new AddCategoryWindow();
+            addCategoryWindow.Owner = this;
+            addCategoryWindow.ShowDialog();
 
-                string json = JsonConvert.SerializeObject(newCategory);
-                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
-
-                HttpResponseMessage response = await httpClient.PostAsync(ApiBaseUrl, content);
-                response.EnsureSuccessStatusCode();
-
-                await LoadCategories();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Wystąpił błąd podczas dodawania kategorii: {ex.Message}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+            await LoadCategories();
         }
 
         private async void DeleteCategoryButton_Click(object sender, RoutedEventArgs e)
@@ -79,71 +69,30 @@ namespace GameShopApp
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Wystąpił błąd podczas usuwania kategorii: {ex.Message}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show($"Podczas usuwania kategorii pojawił się błąd: {ex.Message}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Proszę zaznaczyć kategorię do usunięcia.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Proszę wybrać kategorię do usunięcia.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
         private async void EditCategoryButton_Click(object sender, RoutedEventArgs e)
         {
-            CategoryDto selectedCategory = (CategoryDto)categoriesListBox.SelectedItem;
+            SelectedCategory = (CategoryDto)categoriesListBox.SelectedItem;
 
-            if (selectedCategory != null)
+            if (SelectedCategory != null)
             {
-                try
-                {
-                    HttpResponseMessage response = await httpClient.GetAsync($"{ApiBaseUrl}/{selectedCategory.Id}");
-                    response.EnsureSuccessStatusCode();
-                    string content = await response.Content.ReadAsStringAsync();
-                    CategoryDto updatedCategory = JsonConvert.DeserializeObject<CategoryDto>(content);
+                EditCategoryWindow editCategoryWindow = new EditCategoryWindow(SelectedCategory);
+                editCategoryWindow.Owner = this;
+                editCategoryWindow.ShowDialog();
 
-                    categoryNameTextBox.Text = updatedCategory.CategoryName;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Wystąpił błąd podczas pobierania danych kategorii do edycji: {ex.Message}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
+                await LoadCategories();
             }
             else
             {
-                MessageBox.Show("Proszę zaznaczyć kategorię do edycji.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
-
-        private async void UpdateCategoryButton_Click(object sender, RoutedEventArgs e)
-        {
-            CategoryDto selectedCategory = (CategoryDto)categoriesListBox.SelectedItem;
-
-            if (selectedCategory != null)
-            {
-                try
-                {
-                    CategoryDto updatedCategory = new CategoryDto
-                    {
-                        Id = selectedCategory.Id,
-                        CategoryName = categoryNameTextBox.Text.Trim()
-                    };
-
-                    string json = JsonConvert.SerializeObject(updatedCategory);
-                    StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
-
-                    HttpResponseMessage response = await httpClient.PutAsync($"{ApiBaseUrl}/{updatedCategory.Id}", content);
-                    response.EnsureSuccessStatusCode();
-
-                    await LoadCategories();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Wystąpił błąd podczas aktualizowania kategorii: {ex.Message}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Proszę zaznaczyć kategorię do aktualizacji.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Proszę wybrać kategorię do edytowania.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

@@ -52,7 +52,7 @@ namespace GameShopApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred while adding a producer: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Podczas dodawania zamówienia pojawił się błąd: {ex.Message}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

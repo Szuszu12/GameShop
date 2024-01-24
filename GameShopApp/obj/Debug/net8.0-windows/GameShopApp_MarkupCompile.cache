@@ -1,5 +1,5 @@
 ﻿GameShopApp
-1.0.0.0
+
 
 winexe
 C#
@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\szymo\source\repos\GameShop\GameShopApp\App.xaml
-14-311775412
+16-2067491402
 
-21-1152409243
+21-1996878793
 1991378854379
-MainWindow.xaml;Views\Category\CategoryWindow.xaml;Views\Client\AddClientWindow.xaml;Views\Client\ClientWindow.xaml;Views\Client\EditClientWindow.xaml;Views\Game\AddGameWindow.xaml;Views\Game\EditGameWindow.xaml;Views\Game\GameWindow.xaml;Views\Order\AddOrderWindow.xaml;Views\Order\EditOrderWindow.xaml;Views\Order\OrderWindow.xaml;Views\Producer\AddProducerWindow.xaml;Views\Producer\EditProducerWindow.xaml;Views\Producer\ProducerWindow.xaml;
+MainWindow.xaml;Views\Category\AddCategoryWindow.xaml;Views\Category\CategoryWindow.xaml;Views\Category\EditCategoryWindow.xaml;Views\Client\AddClientWindow.xaml;Views\Client\ClientWindow.xaml;Views\Client\EditClientWindow.xaml;Views\Game\AddGameWindow.xaml;Views\Game\EditGameWindow.xaml;Views\Game\GameWindow.xaml;Views\Order\AddOrderWindow.xaml;Views\Order\EditOrderWindow.xaml;Views\Order\OrderWindow.xaml;Views\Producer\AddProducerWindow.xaml;Views\Producer\EditProducerWindow.xaml;Views\Producer\ProducerWindow.xaml;
 
-True
+False
 

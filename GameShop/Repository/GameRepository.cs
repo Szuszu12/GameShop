@@ -18,32 +18,6 @@ namespace GameShop.Repository
             return Save();
         }
 
-        public bool CreateGame(/*int producerId,*/ int categoryId, Game game)
-        {
-            //var producer = _context.Producers.Where(p => p.Id == producerId).FirstOrDefault();
-            var category = _context.Categories.Where(o => o.Id == categoryId).FirstOrDefault();
-
-            //var gameProducer = new Producer()
-            //{
-            //    ProducerName = producer,
-            //    Game = game,
-            //};
-
-            //_context.Add(producer);
-
-            //var gameCategory = new GameCategory()
-            //{
-            //    Category = category,
-            //    Game = game,
-            //};
-
-            //_context.Add(gameCategory);
-
-            _context.Add(game);
-
-            return Save();
-        }
-
         public bool DeleteGame(Game game)
         {
             _context.Remove(game);
@@ -64,17 +38,6 @@ namespace GameShop.Repository
         {
             return _context.Games.Where(g => g.Title == title).FirstOrDefault();
         }
-
-        /*public decimal GetGameOrderClient(int clientId)
-        {
-            var clientOrder = _context.Orders.Where(c => c.Client.Id == clientId);
-
-            if (clientOrder.Count() <= 0)
-                return 0;
-
-            return ((decimal)clientOrder.Sum(o => o.OrderCost) / clientOrder.Count());
-        }*/
-
         public ICollection<Game> GetGames() 
         {
             return _context.Games.OrderBy(g => g.Id).ToList();

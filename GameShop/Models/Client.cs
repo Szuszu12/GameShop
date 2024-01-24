@@ -11,9 +11,5 @@
         public string City { get; set; }
         public string Region { get; set; }
         public string Country { get; set; }
-
-        //Jeden do wielu (   |   to jest po stronie wiele)
-        //public ICollection<Order> Orders { get; set; }
-
     }
 }

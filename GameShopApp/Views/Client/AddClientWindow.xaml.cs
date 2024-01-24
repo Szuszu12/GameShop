@@ -54,7 +54,7 @@ namespace GameShopApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred while adding a client: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Podczas dodawania klienta pojawił się błąd: {ex.Message}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

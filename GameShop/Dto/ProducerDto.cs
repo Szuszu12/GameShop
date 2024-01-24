@@ -8,6 +8,5 @@ namespace GameShop.Dto
         public string ProducerName { get; set; }
         public string ProducerDescrip { get; set; }
         public string ProducerCountry { get; set; }
-        //public ICollection<Game> Games { get; set; }
     }
 }

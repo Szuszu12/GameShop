@@ -70,7 +70,7 @@ namespace GameShopApp
             }
             else
             {
-                MessageBox.Show("Please select a client to edit.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Proszę wybrać grę do edytowania.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -89,12 +89,12 @@ namespace GameShopApp
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"An error occurred while deleting a game: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show($"Podczas usuwania gry wystąpił błąd: {ex.Message}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Please select a game to delete.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Proszę wybrać grę do usunięcia.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

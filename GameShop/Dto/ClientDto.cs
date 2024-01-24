@@ -13,7 +13,5 @@ namespace GameShop.Dto
         public string City { get; set; }
         public string Region { get; set; }
         public string Country { get; set; }
-       // public ICollection<Order> Orders { get; set; }
-
     }
 }

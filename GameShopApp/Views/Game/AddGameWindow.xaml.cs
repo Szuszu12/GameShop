@@ -51,7 +51,7 @@ namespace GameShopApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred while adding a game: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Podczas dodawania gry wystąpił błąd: {ex.Message}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

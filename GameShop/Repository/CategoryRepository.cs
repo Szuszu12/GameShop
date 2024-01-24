@@ -9,11 +9,10 @@ namespace GameShop.Repository
     public class CategoryRepository : ICategoryRepository
     {
         private readonly GameShopContext _context;
-        //private readonly IMapper _mapper;
-        public CategoryRepository(GameShopContext context/*, IMapper mapper*/)
+
+        public CategoryRepository(GameShopContext context)
         {
             _context = context;
-            //_mapper = mapper;
         }
 
         public bool CategoryExists(int id)
@@ -23,20 +22,13 @@ namespace GameShop.Repository
 
         public bool CreateCategory(Category category)
         {
-            //Change Tracker
-            // adding, updating, modifying
-            // connected or disconnected
-            // EntityState.Added
-            // 
-            _context.Add(category);
-            //_context.SaveChanges();
-
+            _context.Categories.Add(category);
             return Save();
         }
 
         public bool DeleteCategory(Category category)
         {
-            _context.Remove(category);
+            _context.Categories.Remove(category);
             return Save();
         }
 
@@ -47,37 +39,17 @@ namespace GameShop.Repository
 
         public Category GetCategory(int id)
         {
-            return _context.Categories.Where(e => e.Id == id).FirstOrDefault();
+            return _context.Categories.FirstOrDefault(e => e.Id == id);
         }
-
-        //public ICollection<Game> GetGameByCategory(int categoryId)
-        //{
-        //    var category = _context.Categories.FirstOrDefault(c => c.Id == categoryId);
-
-        //    if (category != null)
-        //    {
-        //        var games = _context.Games.Where(c => category.Id == c.CategoryId).ToList();
-        //        return games;
-        //    }
-
-        //    // Zwracamy pustą kolekcję lub null w zależności od wymagań
-        //    return new List<Game>();
-        //}
-
-        //public ICollection<Game> GetGameByCategory(int categoryId)
-        //{
-        //    return _context.GameCategories.Where(e => e.CategoryId == categoryId).Select(c => c.Game).ToList();
-        //}
 
         public bool Save()
         {
-            var saved = _context.SaveChanges();
-            return saved > 0 ? true : false;
+            return _context.SaveChanges() > 0;
         }
 
         public bool UpdateCategory(Category category)
         {
-            _context.Update(category);
+            _context.Categories.Update(category);
             return Save();
         }
     }

@@ -48,7 +48,7 @@ namespace GameShopApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred while loading clients: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Podczas ładowania klientów pojawił się błąd: {ex.Message}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -78,12 +78,12 @@ namespace GameShopApp
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"An error occurred while deleting a client: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show($"Podczas usuwania klienta pojawił się błąd: {ex.Message}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Please select a client to delete.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Proszę wybrać klienta do usunięcia.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -101,7 +101,7 @@ namespace GameShopApp
             }
             else
             {
-                MessageBox.Show("Please select a client to edit.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Proszę wybrać klienta do edytowania.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

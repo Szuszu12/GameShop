@@ -67,7 +67,7 @@ namespace GameShopApp
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"An error occurred while saving changes: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show($"Podczas zapisywania zmian wystąpił błąd: {ex.Message}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
         }

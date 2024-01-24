@@ -6,8 +6,6 @@ namespace GameShop.Interfaces
     {
         ICollection<Producer> GetProducers();
         Producer GetProducer(int id);
-        //Producer GetProducerOfAGame(int producerId);
-        //ICollection<Game> GetGameByProducer(int producerId);
         bool ProducerExists(int producerId);
         bool CreateProducer(Producer producer);
         bool UpdateProducer(Producer producer);

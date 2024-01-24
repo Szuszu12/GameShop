@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameShopApp"
         mc:Ignorable="d"
-        Title="Edit Order" Height="450" Width="400">
+        Title="Edit Order" Height="170" Width="400">
 
     <Grid Background="AliceBlue">
         <Grid.ColumnDefinitions>
@@ -16,15 +16,11 @@
         <StackPanel Grid.Column="0" Margin="10">
             <TextBlock Text="Numer zamówienia:" Margin="0,0,0,5" VerticalAlignment="Center"/>
             <TextBlock Text="Koszt zamówienia:" Margin="0,10,0,10" VerticalAlignment="Center"/>
-            <!-- <TextBlock Text="Client ID:" Margin="0,10,0,10" VerticalAlignment="Center"/>
-            <TextBlock Text="Game ID:" Margin="0,10,0,10" VerticalAlignment="Center"/> -->
         </StackPanel>
 
         <StackPanel Grid.Column="1">
             <TextBox x:Name="orderNumberTextBox" Width="200" Height="30" Margin="0,0,0,5" VerticalContentAlignment="Center" FontSize="16"/>
             <TextBox x:Name="orderCostTextBox" Width="200" Height="30" Margin="0,0,0,5" VerticalContentAlignment="Center" FontSize="16"/>
-            <!-- <TextBox x:Name="clientIdTextBox" Width="200" Height="30" Margin="0,0,0,5" VerticalContentAlignment="Center" FontSize="16"/>
-            <TextBox x:Name="gameIdTextBox" Width="200" Height="30" Margin="0,0,0,5" VerticalContentAlignment="Center" FontSize="16"/> -->
             <Button Content="Zapisz zmiany" Click="SaveChangesButton_Click" Margin="0,10,0,0" VerticalContentAlignment="Center"/>
         </StackPanel>
     </Grid>

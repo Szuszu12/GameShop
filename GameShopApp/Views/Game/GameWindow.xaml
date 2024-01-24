@@ -23,7 +23,10 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Border BorderBrush="DarkGray" BorderThickness="0,0,0,1">
-                        <TextBlock Text="{Binding Title}" Padding="5"/>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Title}" Padding="5"/>
+                        <TextBlock Text="{Binding Price, StringFormat='  Koszt: {0:C}', ConverterCulture='pl-PL'}" Padding="5"/>
+                        </StackPanel>
                     </Border>
                 </DataTemplate>
             </ListBox.ItemTemplate>

@@ -11,7 +11,7 @@ namespace GameShop.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CategoryController : Controller
+    public class CategoryController : ControllerBase
     {
         private readonly ICategoryRepository _categoryRepository;
         private readonly IMapper _mapper;
@@ -27,116 +27,81 @@ namespace GameShop.Controllers
         public IActionResult GetCategories()
         {
             var categories = _mapper.Map<List<CategoryDto>>(_categoryRepository.GetCategories());
-
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
             return Ok(categories);
         }
 
         [HttpGet("{categoryId}")]
         [ProducesResponseType(200, Type = typeof(CategoryDto))]
-        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
         public IActionResult GetCategory(int categoryId)
         {
-            if (!_categoryRepository.CategoryExists(categoryId))
-                return NotFound();
-
             var category = _mapper.Map<CategoryDto>(_categoryRepository.GetCategory(categoryId));
 
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            if (category == null)
+                return NotFound();
 
             return Ok(category);
         }
 
         [HttpPost]
-        [ProducesResponseType(204)]
+        [ProducesResponseType(201, Type = typeof(string))]
         [ProducesResponseType(400)]
+        [ProducesResponseType(422)]
         public IActionResult CreateCategory([FromBody] CategoryDto categoryCreate)
         {
             if (categoryCreate == null)
-                return BadRequest(ModelState);
+                return BadRequest();
 
-            var category = _categoryRepository.GetCategories()
-                .Where(c => c.CategoryName.Trim().ToUpper() == categoryCreate.CategoryName.TrimEnd().ToUpper())
-                .FirstOrDefault();
+            var existingCategory = _categoryRepository.GetCategories()
+                .FirstOrDefault(c => c.CategoryName.Trim().ToUpper() == categoryCreate.CategoryName.TrimEnd().ToUpper());
 
-            if (category != null)
-            {
-                ModelState.AddModelError("", "Kategoria już istnieje");
-                return StatusCode(422, ModelState);
-            }
-
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            if (existingCategory != null)
+                return StatusCode(422, "Category already exists");
 
             var categoryMap = _mapper.Map<Category>(categoryCreate);
 
-            if (!_categoryRepository.CreateCategory(categoryMap))
-            {
-                ModelState.AddModelError("", "Coś poszło nie tak podczas zapisu");
-                return StatusCode(500, ModelState);
-            }
-
-            return Ok("Pomyślnie utworzono");
+            if (_categoryRepository.CreateCategory(categoryMap))
+                return CreatedAtAction("GetCategory", new { categoryId = categoryMap.Id }, "Successfully created");
+            else
+                return StatusCode(500, "Something went wrong during save");
         }
 
         [HttpPut("{categoryId}")]
-        [ProducesResponseType(400)]
         [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
         [ProducesResponseType(404)]
+        [ProducesResponseType(500)]
         public IActionResult UpdateCategory(int categoryId, [FromBody] CategoryDto updatedCategory)
         {
-            if (updatedCategory == null)
-                return BadRequest(ModelState);
-
-            if (categoryId != updatedCategory.Id)
-            {
-                return BadRequest(ModelState);
-            }
+            if (updatedCategory == null || categoryId != updatedCategory.Id)
+                return BadRequest();
 
             if (!_categoryRepository.CategoryExists(categoryId))
-            {
                 return NotFound();
-            }
-
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
 
             var categoryMap = _mapper.Map<Category>(updatedCategory);
 
-            if (!_categoryRepository.UpdateCategory(categoryMap))
-            {
-                ModelState.AddModelError("", "Coś poszło nie tak podczas aktualizowania kategorii");
-                return StatusCode(500, ModelState);
-            }
-
-            return NoContent();
+            if (_categoryRepository.UpdateCategory(categoryMap))
+                return NoContent();
+            else
+                return StatusCode(500, "Something went wrong during update");
         }
 
         [HttpDelete("{categoryId}")]
-        [ProducesResponseType(400)]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
+        [ProducesResponseType(500)]
         public IActionResult DeleteCategory(int categoryId)
         {
             if (!_categoryRepository.CategoryExists(categoryId))
-            {
                 return NotFound();
-            }
 
             var categoryToDelete = _categoryRepository.GetCategory(categoryId);
 
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            if (!_categoryRepository.DeleteCategory(categoryToDelete))
-            {
-                ModelState.AddModelError("", "Coś poszło nie tak podczas usuwania kategorii");
-            }
-
-            return NoContent();
+            if (_categoryRepository.DeleteCategory(categoryToDelete))
+                return NoContent();
+            else
+                return StatusCode(500, "Something went wrong during delete");
         }
     }
 }

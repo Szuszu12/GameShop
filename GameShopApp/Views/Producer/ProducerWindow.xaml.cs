@@ -48,7 +48,7 @@ namespace GameShopApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred while loading producers: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Podczas ładowania producentów pojawił się błąd: {ex.Message}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -78,12 +78,12 @@ namespace GameShopApp
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"An error occurred while deleting a producer: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show($"Podczas usuwania producenta pojawił się błąd: {ex.Message}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Please select a producer to delete.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Proszę wybrać producenta do usunięcia.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -101,7 +101,7 @@ namespace GameShopApp
             }
             else
             {
-                MessageBox.Show("Please select a producer to edit.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Proszę wybrać producenta do edytowania.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

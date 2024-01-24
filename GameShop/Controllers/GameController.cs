@@ -55,7 +55,7 @@ namespace GameShop.Controllers
         [HttpPost]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
-        public IActionResult CreateGame([FromQuery] int producerId, [FromQuery] int categoryId, [FromBody] GameDto gameCreate)
+        public IActionResult CreateGame([FromBody] GameDto gameCreate)
         {
             if (gameCreate == null)
                 return BadRequest(ModelState);
@@ -75,9 +75,8 @@ namespace GameShop.Controllers
 
             var gameMap = _mapper.Map<Game>(gameCreate);
 
-            //gameMap.Producer = _producerRepository.GetProducer(producerId);
 
-            if (!_gameRepository.CreateGame(categoryId, gameMap))
+            if (!_gameRepository.CreateGame(gameMap))
             {
                 ModelState.AddModelError("", "Coś poszło nie tak podczas zapisu");
                 return StatusCode(500, ModelState);

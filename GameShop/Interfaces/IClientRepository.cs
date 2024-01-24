@@ -6,8 +6,6 @@ namespace GameShop.Interfaces
     {
         ICollection<Client> GetClients();
         Client GetClient(int id);
-        //Client GetClientOrder(int orderId);
-        //ICollection<Order> GetOrdersFromClients(int clientId);
         bool ClientExists(int id);
         bool CreateClient(Client client);
         bool UpdateClient(Client client);

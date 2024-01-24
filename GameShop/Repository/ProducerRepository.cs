@@ -8,11 +8,9 @@ namespace GameShop.Repository
     public class ProducerRepository : IProducerRepository
     {
         private readonly GameShopContext _context;
-        //private readonly IMapper _mapper;
-        public ProducerRepository(GameShopContext context/*, IMapper mapper*/)
+        public ProducerRepository(GameShopContext context)
         {
             _context = context;
-            //_mapper = mapper;
 
         }
 
@@ -28,20 +26,10 @@ namespace GameShop.Repository
             return Save();
         }
 
-        //public ICollection<Game> GetGameByProducer(int producerId)
-        //{
-        //    return _context.Games.Where(p => p.Producer.Id == producerId).ToList();
-        //}
         public Producer GetProducer(int producerId)
         {
             return _context.Producers.Where(p => p.Id == producerId).FirstOrDefault();
         }
-
-        //public Producer GetProducerOfAGame(int gameId)
-        //{
-        //    return _context.Games.Where(g => g.Id == gameId).
-        //        Select(p => p.Producer).FirstOrDefault();
-        //}
 
         public ICollection<Producer> GetProducers()
         {

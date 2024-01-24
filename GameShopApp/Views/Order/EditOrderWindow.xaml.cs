@@ -34,8 +34,6 @@ namespace GameShopApp
             {
                 orderNumberTextBox.Text = SelectedOrder.OrderNumber;
                 orderCostTextBox.Text = SelectedOrder.OrderCost.ToString();
-                //clientIdTextBox.Text = SelectedOrder.ClientId.ToString();
-                //gameIdTextBox.Text = SelectedOrder.GameId.ToString();
             }
         }
 
@@ -47,8 +45,6 @@ namespace GameShopApp
                 {
                     SelectedOrder.OrderNumber = orderNumberTextBox.Text.Trim();
                     SelectedOrder.OrderCost = double.Parse(orderCostTextBox.Text.Trim());
-                    //SelectedOrder.ClientId = int.Parse(clientIdTextBox.Text.Trim());
-                    //SelectedOrder.GameId = int.Parse(gameIdTextBox.Text.Trim());
 
                     string json = JsonConvert.SerializeObject(SelectedOrder);
                     StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
@@ -60,7 +56,7 @@ namespace GameShopApp
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"An error occurred while saving changes: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show($"Podczas zapisywania zmian pojawił się błąd: {ex.Message}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
         }

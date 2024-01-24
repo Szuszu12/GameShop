@@ -23,13 +23,11 @@ namespace GameShopApp
         {
             try
             {
-                //int clientId = int.Parse(clientIdTextBox.Text.Trim());
 
                 OrderDto newOrder = new OrderDto
                 {
                     OrderNumber = orderNumberTextBox.Text.Trim(),
                     OrderCost = double.Parse(orderCostTextBox.Text.Trim().Replace(',', '.'), CultureInfo.InvariantCulture) + 9.99,
-                    //ClientId = clientId
                 };
 
                 string json = JsonConvert.SerializeObject(newOrder);
@@ -42,7 +40,7 @@ namespace GameShopApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred while adding an order: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Podczas dodawania zamówienia pojawił się błąd: {ex.Message}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }
