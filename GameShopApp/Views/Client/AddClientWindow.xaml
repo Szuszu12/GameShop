@@ -1,0 +1,39 @@
+﻿<Window x:Class="GameShopApp.AddClientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameShopApp"
+        mc:Ignorable="d"
+        Title="Add Client" Height="450" Width="400">
+
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Margin="0,0,10,0">
+            <TextBlock Text="Name:" Margin="0,10,0,10" VerticalAlignment="Center"/>
+            <TextBlock Text="Phone Number:" Margin="0,10,0,10" VerticalAlignment="Center"/>
+            <TextBlock Text="Email:" Margin="0,10,0,10" VerticalAlignment="Center"/>
+            <TextBlock Text="Address:" Margin="0,10,0,10" VerticalAlignment="Center"/>
+            <TextBlock Text="Postal Code:" Margin="0,10,0,10" VerticalAlignment="Center"/>
+            <TextBlock Text="City:" Margin="0,10,0,10" VerticalAlignment="Center"/>
+            <TextBlock Text="Region:" Margin="0,10,0,10" VerticalAlignment="Center"/>
+            <TextBlock Text="Country:" Margin="0,10,0,10"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <TextBox x:Name="nameTextBox" Width="200" Height="30" Margin="0,0,0,5" VerticalContentAlignment="Center" FontSize="16"/>
+            <TextBox x:Name="phoneNumberTextBox" Width="200" Height="30" Margin="0,0,0,5" VerticalContentAlignment="Center" FontSize="16"/>
+            <TextBox x:Name="emailTextBox" Width="200" Height="30" Margin="0,0,0,5" VerticalContentAlignment="Center" FontSize="16"/>
+            <TextBox x:Name="addressTextBox" Width="200" Height="30" Margin="0,0,0,5" VerticalContentAlignment="Center" FontSize="16"/>
+            <TextBox x:Name="postalCodeTextBox" Width="200" Height="30" Margin="0,0,0,5" VerticalContentAlignment="Center" FontSize="16"/>
+            <TextBox x:Name="cityTextBox" Width="200" Height="30" Margin="0,0,0,5" VerticalContentAlignment="Center" FontSize="16"/>
+            <TextBox x:Name="regionTextBox" Width="200" Height="30" Margin="0,0,0,5" VerticalContentAlignment="Center" FontSize="16"/>
+            <TextBox x:Name="countryTextBox" Width="200" Height="30" Margin="0,0,0,5" VerticalContentAlignment="Center" FontSize="16" />
+            <Button Content="Add Client" Click="AddClientButton_Click" Margin="0,10,0,0" VerticalContentAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Window>
