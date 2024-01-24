@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "GAyQ2SzhFaBUtMh1CarcHDUlm3Kp5sRp5Mt9SBbDxDOmDmZ0ijriTvwQ/dbOgFo9AjN4WOnXDi1x3s+eYn5QGw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\szymo\\source\\repos\\GameShop\\GameShopApp\\GameShopApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\szymo\\.nuget\\packages\\microsoft.extensions.apidescription.client\\6.0.3\\microsoft.extensions.apidescription.client.6.0.3.nupkg.sha512",
+    "C:\\Users\\szymo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\szymo\\.nuget\\packages\\nswag.apidescription.client\\14.0.1\\nswag.apidescription.client.14.0.1.nupkg.sha512",
+    "C:\\Users\\szymo\\.nuget\\packages\\nswag.msbuild\\14.0.1\\nswag.msbuild.14.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
