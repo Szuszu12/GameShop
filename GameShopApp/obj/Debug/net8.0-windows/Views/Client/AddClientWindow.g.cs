@@ -117,7 +117,7 @@ namespace GameShopApp {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/GameShopApp;component/views/client/addclientwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GameShopApp;V1.0.0.0;component/views/client/addclientwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\Client\AddClientWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

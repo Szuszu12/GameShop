@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\szymo\source\repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\
+C:\Users\szymo\Source\Repos\GameShop\GameShopApp\obj\Debug\net8.0-windows\
 GameShopApp
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\szymo\source\repos\GameShop\GameShopApp\App.xaml
+C:\Users\szymo\Source\Repos\GameShop\GameShopApp\App.xaml
 14-311775412
 
 21-1152409243
 1991378854379
 MainWindow.xaml;Views\Category\CategoryWindow.xaml;Views\Client\AddClientWindow.xaml;Views\Client\ClientWindow.xaml;Views\Client\EditClientWindow.xaml;Views\Game\AddGameWindow.xaml;Views\Game\EditGameWindow.xaml;Views\Game\GameWindow.xaml;Views\Order\AddOrderWindow.xaml;Views\Order\EditOrderWindow.xaml;Views\Order\OrderWindow.xaml;Views\Producer\AddProducerWindow.xaml;Views\Producer\EditProducerWindow.xaml;Views\Producer\ProducerWindow.xaml;
 
-True
+False
 
