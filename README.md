@@ -2,28 +2,27 @@
 Welcome to GAMEDLE, a comprehensive game shop application designed for gaming enthusiasts. This application allows users to manage categories, clients, games, orders, and producers efficiently. Below is a guide on how to navigate and utilize the features of GAMEDLE.
 
 # Features:
-Categories Management:
-
+- Categories Management:
 View existing categories.
 Add new categories.
 Edit or delete existing categories.
-Clients Management:
 
+- Clients Management:
 View client information.
 Add new clients.
 Edit or delete existing clients.
-Games Management:
 
+- Games Management:
 View available games.
 Add new games.
 Edit or delete existing games.
-Orders Management:
 
+- Orders Management:
 View order details.
 Add new orders.
 Edit or delete existing orders.
-Producers Management:
 
+- Producers Management:
 View producer information.
 Add new producers.
 Edit or delete existing producers.
