@@ -1,6 +1,9 @@
 ## GAMEDLE - Game Shop Application
 Welcome to GAMEDLE, a comprehensive game shop application designed for gaming enthusiasts. This application allows users to manage categories, clients, games, orders, and producers efficiently. Below is a guide on how to navigate and utilize the features of GAMEDLE.
 
+# Description
+GAMEDLE is a project developed for academic purposes. It's an application to streamline various aspects of managing a gaming store, including categories, clients, games, orders, and producers. The application provides a simple, user-friendly interface for viewing, adding, editing, and deleting records in each category.
+
 # Features:
 - Categories Management:
 View existing categories.
@@ -46,12 +49,6 @@ The project follows a structured approach with separate components for each feat
 - Repositories: Implement data access logic.
 - Views: User interfaces for interacting with different entities.
 
-# How to Use:
-Clone the repository to your local machine.
-Set up the backend API by running the appropriate server application.
-Open the frontend application and navigate to the desired section (categories, clients, games, orders, or producers).
-Use the provided UI to view, add, edit, or delete records as needed.
-
 # Project Components:
 - Backend: The backend is developed using ASP.NET Core Web API.
 - Frontend: The frontend is built using WPF (Windows Presentation Foundation) for the user interface.
@@ -68,11 +65,13 @@ Use the provided UI to view, add, edit, or delete records as needed.
 # Getting Started:
 To get started with GAMEDLE, follow these steps:
 
-## Usage
+# How to Use:
 Clone the repository to your local machine.
-Set up the backend server application and ensure it's running.
-Launch the frontend application and start exploring the features.
-Refer to the documentation and comments in the codebase for more detailed information about each component.
+Be sure to activate Multiple Startup Projects
+Launch application
+In the frontend application, go to the selected section (categories, customers, games, orders or manufacturers).
+Use the provided UI to view, add, edit, or delete records as needed.
+If you want to edit/delete data, click on the selected record and then click on the selected method.
 
 ```bash
 git clone https://github.com/Szuszu12/GameShop.git
