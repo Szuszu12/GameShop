@@ -27,15 +27,24 @@ View producer information.
 Add new producers.
 Edit or delete existing producers.
 
+# Technologies Used
+- C#
+- ASP.NET Core
+- WPF (Windows Presentation Foundation)
+- Entity Framework Core
+- AutoMapper
+- HttpClient
+- MS SQL Server
+
 # Project Structure:
 The project follows a structured approach with separate components for each feature:
 
-Controllers: Handle incoming requests and execute appropriate actions.
-DTOs (Data Transfer Objects): Define data structures for communication between client and server.
-Interfaces: Define contracts for repository classes.
-Models: Represent entities in the application.
-Repositories: Implement data access logic.
-Views: User interfaces for interacting with different entities.
+- Controllers: Handle incoming requests and execute appropriate actions.
+- DTOs (Data Transfer Objects): Define data structures for communication between client and server.
+- Interfaces: Define contracts for repository classes.
+- Models: Represent entities in the application.
+- Repositories: Implement data access logic.
+- Views: User interfaces for interacting with different entities.
 
 # How to Use:
 Clone the repository to your local machine.
@@ -44,18 +53,19 @@ Open the frontend application and navigate to the desired section (categories, c
 Use the provided UI to view, add, edit, or delete records as needed.
 
 # Project Components:
-Backend: The backend is developed using ASP.NET Core Web API.
-Frontend: The frontend is built using WPF (Windows Presentation Foundation) for the user interface.
-API Communication: HTTP requests are used for communication between the frontend and backend using JSON data format.
-Database: The application interacts with a database to store and retrieve information about categories, clients, games, orders, and producers.
+- Backend: The backend is developed using ASP.NET Core Web API.
+- Frontend: The frontend is built using WPF (Windows Presentation Foundation) for the user interface.
+- API Communication: HTTP requests are used for communication between the frontend and backend using JSON data format.
+- Database: The application interacts with a database to store and retrieve information about categories, clients, games, orders, and producers.
 
 # Additional Information:
-Technology Stack: C#, ASP.NET Core, WPF, Entity Framework Core, AutoMapper, HttpClient.
-Dependencies: AutoMapper is used for mapping DTOs to entity models and vice versa. HttpClient is used for making HTTP requests to the backend API.
-Error Handling: The application handles errors gracefully and provides appropriate error messages to the user.
-Validation: Input data is validated both on the client side and server side to ensure data integrity.
-Security: The application follows security best practices to prevent common vulnerabilities such as SQL injection and cross-site scripting (XSS).
-Getting Started:
+- Technology Stack: C#, ASP.NET Core, WPF, Entity Framework Core, AutoMapper, HttpClient.
+- Dependencies: AutoMapper is used for mapping DTOs to entity models and vice versa. HttpClient is used for making HTTP requests to the backend API.
+- Error Handling: The application handles errors gracefully and provides appropriate error messages to the user.
+- Validation: Input data is validated both on the client side and server side to ensure data integrity.
+- Security: The application follows security best practices to prevent common vulnerabilities such as SQL injection and cross-site scripting (XSS).
+- 
+# Getting Started:
 To get started with GAMEDLE, follow these steps:
 
 ## Usage
