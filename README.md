@@ -75,3 +75,5 @@ If you want to edit/delete data, click on the selected record and then click on 
 
 ```bash
 git clone https://github.com/Szuszu12/GameShop.git
+
+ **Developer**: Szuszu12
