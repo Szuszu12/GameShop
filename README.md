@@ -73,7 +73,7 @@ In the frontend application, go to the selected section (categories, customers, 
 Use the provided UI to view, add, edit, or delete records as needed.
 If you want to edit/delete data, click on the selected record and then click on the selected method.
 
-```bash
+```
 git clone https://github.com/Szuszu12/GameShop.git
-
+```
  **Developer**: Szuszu12
