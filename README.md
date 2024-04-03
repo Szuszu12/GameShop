@@ -61,7 +61,7 @@ The project follows a structured approach with separate components for each feat
 - Error Handling: The application handles errors gracefully and provides appropriate error messages to the user.
 - Validation: Input data is validated both on the client side and server side to ensure data integrity.
 - Security: The application follows security best practices to prevent common vulnerabilities such as SQL injection and cross-site scripting (XSS).
-- 
+  
 # Getting Started:
 To get started with GAMEDLE, follow these steps:
 
